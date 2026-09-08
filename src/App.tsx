@@ -5,10 +5,11 @@ function App() {
   // Roteamento simples baseado no pathname
   const path = window.location.pathname;
   
-  // Remove o base path se estiver em produção
-  const cleanPath = path.replace("/niver", "");
-
-  if (cleanPath === "/admin") {
+  // Normaliza o path removendo trailing slash e base
+  const normalizedPath = path.replace(/\/$/, '').toLowerCase();
+  
+  // Verifica se termina com /admin (funciona tanto local quanto no GitHub Pages)
+  if (normalizedPath.endsWith('/admin')) {
     return <AdminPage />;
   }
 
