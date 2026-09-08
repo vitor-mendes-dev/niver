@@ -1,6 +1,7 @@
 import { event } from "@/lib/event";
 import { GoldRule } from "./ornament";
 import { Reveal } from "./reveal";
+import { assetPath } from "@/lib/utils";
 
 export function Epilogue() {
   return (
@@ -11,13 +12,13 @@ export function Epilogue() {
         muted
         loop
         playsInline
-        poster="/images/night.jpg"
+        poster={assetPath("/images/night.jpg")}
         aria-hidden
       >
-        <source src="/videos/night.mp4" type="video/mp4" />
+        <source src={assetPath("/videos/night.mp4")} type="video/mp4" />
       </video>
       <img
-        src="/images/night.jpg"
+        src={assetPath("/images/night.jpg")}
         alt=""
         className="absolute inset-0 size-full object-cover md:hidden"
       />

@@ -1,12 +1,13 @@
 import { event } from "@/lib/event";
 import { GoldRule, SectionKicker } from "./ornament";
 import { Reveal } from "./reveal";
+import { assetPath } from "@/lib/utils";
 
 export function Program() {
   return (
     <section className="relative overflow-hidden bg-night-deep px-6 py-24 md:py-32">
       <img
-        src="/images/table.jpg"
+        src={assetPath("/images/table.jpg")}
         alt=""
         className="absolute inset-0 size-full object-cover opacity-25"
       />

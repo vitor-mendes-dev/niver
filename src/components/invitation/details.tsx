@@ -2,12 +2,13 @@ import { event } from "@/lib/event";
 import { detailCards } from "./panels";
 import { GoldRule, SectionKicker } from "./ornament";
 import { Reveal } from "./reveal";
+import { assetPath } from "@/lib/utils";
 
 export function Details() {
   return (
     <section className="relative overflow-hidden bg-night px-6 py-24 md:py-32">
       <img
-        src="/images/night.jpg"
+        src={assetPath("/images/night.jpg")}
         alt=""
         className="absolute inset-0 size-full object-cover opacity-40"
       />

@@ -10,7 +10,7 @@ import {
   writeRsvp,
   type RsvpRecord,
 } from "@/lib/storage";
-import { cn } from "@/lib/utils";
+import { cn, assetPath } from "@/lib/utils";
 import {
   Dialog,
   DialogContent,
@@ -80,7 +80,7 @@ export function GiftsPanel({ children }: { children: React.ReactNode }) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <PanelShell
-          image="/images/table.jpg"
+          image={assetPath("/images/table.jpg")}
           kicker="Para ela"
           title="Lista de presentes"
         >
@@ -140,7 +140,7 @@ export function LocationPanel({ children }: { children: React.ReactNode }) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <PanelShell
-          image="/images/lantern.jpg"
+          image={assetPath("/images/lantern.jpg")}
           kicker="Onde a noite acontece"
           title={event.venue}
         >
@@ -226,7 +226,7 @@ export function RsvpPanel({ children }: { children: React.ReactNode }) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <PanelShell
-          image="/images/hero.jpg"
+          image={assetPath("/images/hero.jpg")}
           kicker="Confirme sua presença"
           title="Sua presença é parte da história."
         >

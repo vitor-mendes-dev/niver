@@ -1,5 +1,6 @@
 import { event } from "@/lib/event";
 import { GoldRule, SectionKicker } from "./ornament";
+import { assetPath } from "@/lib/utils";
 
 export function Prologue({
   opening,
@@ -13,7 +14,7 @@ export function Prologue({
       className={`fixed inset-0 z-40 overflow-hidden bg-night ${opening ? "prologue-iris" : ""}`}
     >
       <img
-        src="/images/night.jpg"
+        src={assetPath("/images/night.jpg")}
         alt=""
         className="ken-burns absolute inset-0 size-full object-cover"
       />
@@ -37,7 +38,7 @@ export function Prologue({
           aria-label="Abrir convite"
         >
           <img
-            src="/images/envelope.jpg"
+            src={assetPath("/images/envelope.jpg")}
             alt="Envelope lacrado em cera dourada"
             className="h-64 w-full object-cover sm:h-80"
           />

@@ -2,6 +2,7 @@ import { ChevronDown } from "lucide-react";
 import { event } from "@/lib/event";
 import { Fireflies } from "./fireflies";
 import { GoldRule } from "./ornament";
+import { assetPath } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -12,13 +13,13 @@ export function Hero() {
         muted
         loop
         playsInline
-        poster="/images/hero.jpg"
+        poster={assetPath("/images/hero.jpg")}
         aria-hidden
       >
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src={assetPath("/videos/hero.mp4")} type="video/mp4" />
       </video>
       <img
-        src="/images/hero-portrait.jpg"
+        src={assetPath("/images/hero-portrait.jpg")}
         alt=""
         className="ken-burns absolute inset-0 size-full object-cover md:hidden"
       />
